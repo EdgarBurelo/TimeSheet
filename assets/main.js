@@ -33,8 +33,31 @@
     // <h4 id="email-display">Email: jimmy@john.edu</h4>
     // <h4 id="age-display">Age: 27</h4>
     // <p id="comment-display">I'm signing up, because I want to spread sandwiches to the world.</p>
-
+    var tblRow = $("<tr>");
+    var tblName = $("<td>");
+    var tblRole = $("<td>");
+    var tblStart = $("<td>");
+    var tblMonthlyRate = $("<td>");
+    var tblMonthlyWorked = $("<td>");
+    var tblMonthlyTotaledBilled = $("<td>");
     
+
+    tblName.text(snapshot.val().name);
+    tblRole.text(snapshot.val().role);
+    tblStart.text(snapshot.val().start);
+    tblMonthlyRate.text(snapshot.val().monthlyRate);
+    tblMonthlyWorked.text("10");
+    tblMonthlyTotaledBilled.text(10*snapshot.val().monthlyRate);
+
+    tblRow.append(tblName);
+    tblRow.append(tblRole);
+    tblRow.append(tblStart);
+    tblRow.append(tblMonthlyWorked);
+    tblRow.append(tblMonthlyRate);
+    tblRow.append(tblMonthlyTotaledBilled);
+    $("tbody").append(tblRow);
+
+
   }, function(errorObject) {
     console.log("The read failed: " + errorObject.code);
 });
