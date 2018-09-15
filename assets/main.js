@@ -11,11 +11,11 @@
 
   $("#submit").on("click",function() {
     event.preventDefault();
-    name = $("").val().trim();
-    role = $("").val().trim();
-    start = $("").val().trim();
-    monthlyRat = $("").val().trim();
-
-
+    name = $("#employeeName").val().trim();
+    role = $("#employeeRole").val().trim();
+    start = $("#startYear").val().trim();
+    monthlyRate = $("#monthlyRate").val().trim();
+    console.log(name+" "+role+" "+start+" "+monthlyRate);
+   
 
   });
