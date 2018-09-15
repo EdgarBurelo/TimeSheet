@@ -16,12 +16,17 @@
     name = $("#employeeName").val().trim();
     role = $("#employeeRole").val().trim();
     start = $("#startYear").val().trim();
+    var randomFormat = "DD/MM/YYYY";
+    convertedDate = moment(start, randomFormat);
+    
+    var dateRight = convertedDate._i;
+    console.log(dateRight);
     monthlyRate = $("#monthlyRate").val().trim();
-    console.log(name+" "+role+" "+start+" "+monthlyRate);
+    //console.log(name+" "+role+" "+start+" "+monthlyRate);
     database.ref().push({
       name: name,
       role: role,
-      start: start, //timestamp
+      start: dateRight, //timestamp
       monthlyRate: monthlyRate
     });
   }); 
@@ -46,8 +51,13 @@
     tblRole.text(snapshot.val().role);
     tblStart.text(snapshot.val().start);
     tblMonthlyRate.text(snapshot.val().monthlyRate);
-    tblMonthlyWorked.text("10");
-    tblMonthlyTotaledBilled.text(10*snapshot.val().monthlyRate);
+    //tblMonthlyWorked.text("10");
+    var date = snapshot.val().start;
+    
+    
+    var months = -1 * moment(date).diff(moment(), "months");
+    tblMonthlyWorked.text(months);
+    tblMonthlyTotaledBilled.text(months*snapshot.val().monthlyRate);
 
     tblRow.append(tblName);
     tblRow.append(tblRole);
