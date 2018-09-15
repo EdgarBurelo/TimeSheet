@@ -9,4 +9,13 @@
   };
   firebase.initializeApp(config);
 
-  $("")
+  $("#submit").on("click",function() {
+    event.preventDefault();
+    name = $("").val().trim();
+    role = $("").val().trim();
+    start = $("").val().trim();
+    monthlyRat = $("").val().trim();
+
+
+
+  });
