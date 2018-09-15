@@ -9,11 +9,50 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <!-- Styles CSS -->
     <link rel="stylesheet" href="./assets/main.css">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
     <title>Hello, world!</title>
   </head>
   <body>
-    
-
+    <section id="parameters" class="container-fluid">
+        <div class="card">
+            <div class="card-header text-center">
+                <p class="headline display-3">Employee DataBase</p>
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="form-group row pl-3 pr-3 mt-3">
+                        <label class="col-sm-3 col-form-label text-sm-center"><i class="fas fa-user"></i> Employee Name</label>
+                        <div class="col-sm-9">
+                            <input type="text" id="emoloyeeName" class="form-control" placeholder="John Smith" required>
+                        </div>
+                    </div>
+                    <div class="form-group row pl-3 pr-3">
+                        <label class="col-sm-3 col-form-label text-sm-center"><i class="fas fa-user-tag"></i> Role</label>
+                        <div class="col-sm-9">
+                            <input type="text" id="employRole" class="form-control" placeholder="CEO" required>
+                        </div>
+                    </div>
+                    <div class="form-group row pl-3 pr-3">
+                        <label class="col-sm-3 col-form-label text-sm-center"><i class="fas fa-calendar-alt"></i> Start Date (MM/DD/YYYY)</label>
+                        <div class="col-sm-9">
+                            <input type="date" id="startYear" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group row pl-3 pr-3">
+                        <label class="col-sm-3 col-form-label text-sm-center"><i class="fas fa-chart-line"></i> Monthly Rate</label>
+                        <div class="col-sm-9">
+                            <input type="text" id="endYear" class="form-control" placeholder="200000">
+                        </div>
+                    </div>
+                    <div class="text-center mb-3">
+                        <button href="#" id="submitBtn" type="submit" class="btn mr-3">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
